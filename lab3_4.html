@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Розрахунок</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>	
+	<body>
+        <h1>Приклад створення користувацької функції, що повертає значення</h1>
+		<script>
+			function AddNums(firstnum, secondnum) { 
+				return firstnum + secondnum;
+			}
+
+			function MultiplyNums(firstnum, secondnum) {
+				return firstnum * secondnum;
+			}
+
+			document.write("345 + 55 = ", AddNums(345, 55), "<br>");
+			document.write("12 * 12 = ", MultiplyNums(12, 12), "<br>");
+			document.write("(34 + 23) * 20 = ", MultiplyNums(AddNums(34, 23), 20), "<br>");
+		</script>
+        <h1><a href="index.html">На головну</a></h1>
+	</body>
+</html>

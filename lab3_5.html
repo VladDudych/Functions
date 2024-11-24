@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Рядки</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>	
+	<body>
+        <h1>Відображення тексту</h1>
+		<script>
+			"use strict";
+			function printText(txt, size = 14, color = 'black') {
+				document.write(`<div style="font-size:${size}pt; color:${color}">${txt}</div>`);
+			}
+
+			printText("Перший рядок синього кольору", 16, 'blue');
+			printText("Другий рядок червоного кольору, більший", 24, 'red');
+			printText("Третій рядок зеленого кольору, стандартний розмір");
+			printText("Четвертий рядок фіолетового кольору, маленький", 10, 'purple');
+		</script>
+          <h1><a href="index.html">На головну</a></h1>
+	</body>
+</html>

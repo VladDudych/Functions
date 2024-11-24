@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Поточна дата і час</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>	
+	<body>
+		<h1>Використання вбудованих функцій об'єкта Date</h1>
+		<p id="date"></p>
+		<p id="time"></p>
+		<p id="day"></p>
+
+		<script>
+			"use strict";
+
+			let today = new Date();
+			let dayOfMonth = today.getDate();
+			let daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+			let dayOfWeek = daysOfWeek[today.getDay()];
+			let hours = today.getHours();
+			let minutes = today.getMinutes();
+			if (minutes < 10) minutes = "0" + minutes;
+			let time12 = hours < 12 ? `${hours}:${minutes} am` : `${hours - 12}:${minutes} pm`;
+
+			document.getElementById("date").innerText = `Сьогодні: ${dayOfMonth}-те число.`;
+
+			document.getElementById("time").innerText = `Поточний час: ${time12}.`;
+
+			let dayElement = document.getElementById("day");
+			dayElement.innerText = `Сьогодні день тижня: ${dayOfWeek}.`;
+			dayElement.style.fontSize = "24px"; 
+			dayElement.style.color = "red"; 
+			dayElement.style.fontWeight = "bold"; 
+		</script>
+         <h1><a href="index.html">На головну</a></h1>
+	</body>
+</html>

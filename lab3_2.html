@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Визначення часу</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>    
+    <body>
+        <script>
+            "use strict";
+            let today = new Date();
+            let targetDay = new Date(today.getFullYear(), 5, 12); 
+            const day = 86400000;
+            const hour = 3600000; 
+            const minute = 60000;
+            let time = targetDay.getTime() - today.getTime(); 
+            
+            if (time < 0) { 
+                targetDay = new Date(today.getFullYear() + 1, 5, 12); 
+                time = targetDay.getTime() - today.getTime();
+            }
+
+            let days = Math.floor(time / day);
+            let hours = Math.floor((time - days * day) / hour);
+            let minutes = Math.floor((time - days * day - hours * hour) / minute);
+            let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+            console.log("До мого дня народження лишилося ", str);
+            alert("До 12 червня залишилося " + str);
+        </script>
+         <h1><a href="index.html">На головну</a></h1>
+    </body>
+</html>

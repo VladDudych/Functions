@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Факторіали</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>  
+  <body>
+    <script>
+      function factorial(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        }
+        let result = 1;
+        for (let i = 2; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      }
+
+      for (let i = 1; i <= 9; i++) {
+        document.write("Факторіал числа " + i + " = " + factorial(i) + "<br>");
+      }
+    </script>
+    <h1><a href="index.html">На головну</a></h1>
+  </body>
+</html>

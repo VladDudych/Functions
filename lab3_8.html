@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Множення аргументів</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>	
+	<body>
+		<script>
+			function multiply() {
+				if (arguments.length < 2) {
+					alert("Потрібно передати хоча б два аргументи");
+					return;
+				}
+				var result = 1;
+				for (var i = 0; i < arguments.length; i++) { 
+					result *= arguments[i];
+				}
+				return result;
+			}
+
+			document.write("Результат множення 2 і 3: ", multiply(2, 3), "<br>");
+			document.write("Результат множення 1, 4 і 5: ", multiply(1, 4, 5), "<br>");
+			document.write("Результат множення 3, 2, 6 і 7: ", multiply(3, 2, 6, 7), "<br>");
+		</script>
+        <h1><a href="index.html">На головну</a></h1>
+	</body>
+</html>
